@@ -1,0 +1,155 @@
+/* research.css */
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Darker overlay for better text readability */
+    z-index: 1; /* Place overlay above the background image */
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2; /* Place content above the overlay */
+}
+
+.hero-section h1 {
+    font-size: 4.5rem; /* Adjusted for better screen fit */
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section .lead {
+    font-size: 1.8rem; /* Adjusted for better screen fit */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Research Areas */
+#research-areas {
+    padding: 70px 0;
+}
+
+#research-areas h2 {
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#research-areas p {
+    color: #777;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+#research-areas .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#research-areas .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#research-areas .card-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #333;
+}
+
+#research-areas .card-text {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Research Projects Section */
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+.card{
+    border-radius: 10px;
+}
+
+/* Recent Publications */
+.list-group-item {
+    border: none;
+    padding: 1rem 0;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+.list-group-item a {
+    color: #007bff; /* Bootstrap primary color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.list-group-item a:hover {
+    color: #0056b3;
+}
+
+/* Collaboration Section */
+.partner-logo {
+    max-width: 150px;
+    height: auto;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.partner-logo:hover {
+    opacity: 1;
+}
+
+/*Responsiveness*/
+@media (max-width: 768px) {
+    /*Title in here*/
+    .hero-section h1 {
+        font-size: 3.5rem; /* Adjusted for smaller screens */
+    }
+
+    .hero-section .lead {
+        font-size: 1.4rem; /* Adjusted for smaller screens */
+    }
+
+    #research-areas h2 {
+        font-size: 2.8rem; /* Adjusted for smaller screens */
+    }
+    /*Image in Resear Area*/
+    #research-areas .card img {
+        height: 200px;
+        object-fit: cover;
+    }
+}
+
+/*Animations*/
+.animate__animated.animate__fadeInDown {
+    --animate-duration: 1s;
+}
+.animate__animated.animate__fadeInUp {
+    --animate-duration: 1.2s;
+}

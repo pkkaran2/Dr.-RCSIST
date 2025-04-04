@@ -1,0 +1,135 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Hero Section */
+.about-hero {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('images/about-hero.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    animation: slideInDown 1s ease-in-out;
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Core Values */
+.core-values {
+    background: white;
+    padding: 80px 0;
+}
+
+.core-values .card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.core-values .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Vision & Mission */
+.vision-mission {
+    background: #f1f1f1;
+    padding: 80px 0;
+}
+
+.vision-mission .card {
+    transition: all 0.5s ease-in-out;
+    transform: scale(1);
+}
+
+.vision-mission .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Faculty Section */
+.faculty {
+    background: linear-gradient(to right, #007bff, #6610f2);
+    color: white;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.faculty a {
+    background: white;
+    color: #007bff;
+    padding: 12px 20px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.faculty a:hover {
+    background: #0056b3;
+    color: white;
+}
+
+/* Campus Image */
+.campus-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.campus-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-hero p {
+        font-size: 1rem;
+    }
+}

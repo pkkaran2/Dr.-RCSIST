@@ -1,0 +1,505 @@
+/* style/index.css */
+
+/* General Styles */
+body, html {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scroll on wider screens */
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Hero Section */
+#heroCarousel {
+    margin-top: 0px;
+    overflow: hidden; /* Clip overflowing content (for animations) */
+}
+
+.carousel-item {
+    height: 500px;
+    background-color: #000;
+    position: relative; /* For positioning the caption */
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    opacity: 0.6;
+    animation: kenburns 15s linear infinite; /* Ken Burns effect */
+}
+
+/*@keyframes kenburns {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}*/
+
+.carousel-caption {
+    position: absolute; /* Position over the image */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center perfectly */
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000000;
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 1s ease-in-out forwards 0.5s; /* Fade in animation */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.carousel-caption h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    animation: slideInDown 1s ease-out forwards; /* Slide in from top */
+    transform: translateY(-20px); /* Initial position */
+}
+
+@keyframes slideInDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    animation: slideInUp 1s ease-out forwards 0.3s; /* Slide in from bottom */
+    transform: translateY(20px); /* Initial position */
+}
+
+@keyframes slideInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* About Section */
+.about {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+}
+
+.about .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-image {
+    width: 40%;
+    margin-bottom: 20px;
+    animation: fadeInRight 1s ease-out; /* Fade in from right */
+}
+
+@keyframes fadeInRight {
+    from { transform: translateX(50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 5px solid #fff; /* White border around college image */
+}
+
+.about-content {
+    width: 55%;
+    text-align: justify;
+    animation: fadeInLeft 1s ease-out; /* Fade in from left */
+}
+
+@keyframes fadeInLeft {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.about-content h2 {
+    margin-bottom: 15px;
+    color: #343a40;
+}
+
+.about-content p {
+    line-height: 1.6;
+    color: #6c757d;
+}
+
+/* Latest News Section */
+.latest-news {
+    padding: 50px 0;
+    background-color: #ffffff;
+}
+
+.latest-news h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #343a40;
+}
+
+.news-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.news-item {
+    width: 45%;
+    margin-bottom: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.news-item:nth-child(1) {
+    border-left: 5px solid #007bff; /* Blue border for Admissions Open news */
+}
+
+.news-item:nth-child(2) {
+    border-left: 5px solid #28a745; /* Green border for BIOE Admissions news */
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.news-image {
+    width: 45%;
+    height: auto;
+    display: block;
+}
+
+.news-content {
+    padding: 15px;
+}
+
+.news-content h3 {
+    margin-bottom: 5px;
+    color: #212529;
+}
+
+.news-content p {
+    color: #495057;
+}
+
+.news-link {
+    color: #007bff;
+    display: block;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.news-link:hover {
+    color: #0056b3;
+}
+
+/* Academic Programs Section */
+.programs {
+    padding: 50px 0;
+    background-color: #e9ecef;
+}
+
+.programs h2 {
+    color: #343a40;
+    margin-bottom: 30px;
+    animation: zoomIn 1s ease-out;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.program-item {
+    margin-bottom: 20px;
+}
+
+.program-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+}
+
+.program-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.program-card h3 {
+    color: #212529;
+    margin-bottom: 10px;
+}
+
+.program-card p {
+    color: #495057;
+    flex-grow: 1;
+}
+
+.program-link {
+    color: #28a745;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    margin-top: 10px;
+}
+
+.program-link:hover {
+    color: #1e7e34;
+}
+
+/* style/index.css (or style/ranking.css) */
+
+.minimalist-section {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.minimalist-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.minimalist-section .ranking-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.minimalist-section .ranking-item {
+    width: 30%; /* Adjust as needed */
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.minimalist-section .ranking-item:hover {
+    transform: translateY(-5px);
+}
+
+.minimalist-section .ranking-item i {
+    font-size: 3rem;
+    color: #28a745; /* Green color */
+    margin-bottom: 10px;
+}
+
+.minimalist-section .ranking-item p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .minimalist-section .ranking-item {
+        width: 80%;
+    }
+}
+
+/*@keyframes bounceIn {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-20px); }
+    60% { transform: translateY(-10px); }
+}*/
+
+.ranking-recognition .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.ranking-content {
+    width: 55%;
+    text-align: justify;
+}
+
+.ranking-content p {
+    line-height: 1.6;
+    color: #6c757d;
+}
+
+.ranking-content ul {
+    list-style: disc;
+    padding-left: 20px;
+    color: #6c757d;
+}
+
+.ranking-image {
+    width: 40%;
+    margin-bottom: 20px;
+    animation: rotateIn 1s ease-out; /* Rotate in */
+}
+
+@keyframes rotateIn {
+    from { transform: rotate(-360deg); opacity: 0; }
+    to { transform: rotate(0deg); opacity: 1; }
+}
+
+.ranking-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Stats & Figures Section */
+.stats-figures {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+}
+
+.stats-figures h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #343a40;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.stats-box {
+    width: 22%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+    animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
+
+.stats-box h3 {
+    color: #28a745;
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.stats-box p {
+    color: #495057;
+}
+
+/* Contact Form Section */
+.contact {
+    padding: 50px 0;
+    background-color: #ffffff;
+}
+
+.contact h2 {
+    color: #343a40;
+    margin-bottom: 30px;
+}
+
+.contact form {
+    margin-top: 20px;
+}
+
+.contact label {
+    color: #495057;
+    font-weight: 500;
+}
+
+.contact .form-control {
+    margin-bottom: 15px;
+}
+
+/* Animated Button */
+.animated-button {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Initial shadow */
+}
+
+.animated-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+.animated-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reset to initial shadow */
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .about-image, .ranking-image {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .about-content, .ranking-content {
+        width: 100%;
+        text-align: left;
+    }
+
+    .news-item {
+        width: 100%;
+    }
+
+    .stats-box {
+        width: 45%;
+    }
+
+    .carousel-caption h1 {
+        font-size: 2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-box {
+        width: 100%;
+    }
+
+    #heroCarousel {
+        margin-top: 60px;
+    }
+
+    .carousel-item {
+        height: 400px;
+    }
+
+    .carousel-caption h1 {
+        font-size: 1.75rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,184 @@
+/* style/footer.css */
+
+
+/* ==================== General Footer Styles ==================== */
+.footer {
+    background-color: #243451; /* Deeper blue, more sophisticated */
+    color: #fff;
+    padding: 50px 0;
+    font-size: 0.9em;
+    line-height: 1.7; /* Improved line height for readability */
+}
+
+.footer a {
+    color: #B0C4DE; /* A softer white for links */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+    border-bottom: 1px solid transparent; /* Underline on hover effect */
+}
+
+.footer a:hover {
+    color: #fff;
+    border-bottom-color: #fff; /* Show underline on hover */
+}
+
+
+/* List Styles */
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 5px;
+}
+
+.footer ul li a {
+    display: flex;
+    align-items: center;
+}
+
+.footer ul li a i {
+    margin-right: 8px;
+    color: #f0db4f;
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover i {
+    color: #fff;
+}
+
+/* ==================== Social Links Styles ==================== */
+.social-links {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Slightly larger icons */
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #3B82F6; /* A modern blue */
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 15px; /* Increased spacing */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* More shadow */
+}
+
+/* ==================== Button Styles ==================== */
+.footer-btn {
+    background-color: transparent;
+    border: 2px solid #60A5FA; /* Light blue border */
+    color: #fff;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 7px; /* More rounded corners */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-size: 0.9em;
+    font-weight: 500; /* Semi-bold */
+}
+
+.footer-btn:hover {
+    background-color: #60A5FA; /* Light blue background on hover */
+    color: #243451; /* Dark text on hover */
+}
+/* Bottom Footer Styles */
+.footer-hr {
+    border-color: rgba(255, 255, 255, 0.2);
+    margin: 20px 0;
+}
+
+.bottom-footer {
+    padding-top: 20px;
+}
+
+.bottom-links a {
+    margin: 0 10px;
+    font-size: 0.9rem;
+}
+
+.footer-logo {
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-in-out;
+    border-radius: 5px;
+}
+
+/* Newsletter Form */
+.newsletter-form .input-group {
+    margin-bottom: 10px; /* Added margin to separate from the text */
+}
+
+.newsletter-form .form-control {
+    border-radius: 0;
+    border: none; /* Remove border for a cleaner look */
+    padding: 10px 15px;
+    background-color: #495057; /* Darker background for the input */
+    color: #fff; /* White text in the input */
+}
+
+.newsletter-form .form-control::placeholder {
+    color: #adb5bd; /* Placeholder color */
+}
+
+.newsletter-form .btn {
+    border-radius: 0;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .footer {
+        text-align: center;
+    }
+
+    .social-links {
+        margin-top: 10px;
+    }
+
+    .social-links a {
+        margin: 0 8px;
+    }
+}
+
+/* Keyframe Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Wave Animation (Optional) */
+.footer::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('images/wave.png');
+    background-size: cover;
+    opacity: 0.4;
+    animation: wave 10s linear infinite;
+}
+
+/*@keyframes wave {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}*/
